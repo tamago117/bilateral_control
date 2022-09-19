@@ -1,0 +1,18 @@
+<launch>
+    <arg name="rviz" default="true"/>
+
+    <node name="symmetric" pkg="bilateral_control" type="symmetric" output="screen">
+        <param name="current limit" value="50"/>
+        <param name="Kp" value="0.65"/>
+    </node>
+
+    <!--
+    <include file="$(find eg_navigation)/launch/include/model_show.launch" >
+        <arg name="include" value="true"/>
+        <arg name="model" default="$(arg model)" />
+    </include>
+    <group if="$(arg rviz)">
+        <arg name="rvizconfig" default="$(find eg_navigation)/rviz/operation_check.rviz" />
+        <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true" />
+    </group>-->
+</launch>
