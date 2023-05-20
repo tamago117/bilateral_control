@@ -54,4 +54,9 @@ target_link_libraries(symmetric
   ${catkin_LIBRARIES}
 )
 
+add_executable(unity_bilateral   src/unity_bilateral.cpp)
+target_link_libraries(unity_bilateral
+  ${catkin_LIBRARIES}
+)
+
 
